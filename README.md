@@ -1,4 +1,4 @@
-# NEST JS WITH TDD
+# NEST JS TESTING WITH TDD
 
 ## Init project
 ```
@@ -9,3 +9,7 @@ yarn
 ```
 yarn start:dev
 ```
+
+
+## References 
+* https://docs.nestjs.com/fundamentals/testing
