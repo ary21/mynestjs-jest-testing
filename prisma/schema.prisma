@@ -1,0 +1,29 @@
+generator erd {
+  provider = "prisma-erd-generator"
+  output   = "../ERD.png"
+  theme    = "neutral"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserRole {
+  USER
+  ADMIN
+}
+
+model User {
+  id          Int      @id @default(autoincrement())
+  email       String   @unique
+  name        String?
+  nik         String?
+  deviceToken String?
+  role        UserRole @default(USER)
+  deleted     Boolean  @default(false)
+}
