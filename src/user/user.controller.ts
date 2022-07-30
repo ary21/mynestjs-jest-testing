@@ -22,6 +22,7 @@ export class UserController {
 
   @Get()
   findAll(@Query() query) {
+    return 'a';
     return this.userService.findAll(query);
   }
 
